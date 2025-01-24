@@ -41,3 +41,4 @@ public class Item
         System.out.println("Name: " + name);
         System.out.println("Amount: " + quantity);
     }
+}
