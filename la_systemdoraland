@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class la_systemdoraland {
+    public static void main(String[] args) {
+        Inventory inventory = new Inventory();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\n1 2 1 2 3 4 we're swaying on horse back");
+            System.out.println("1. Add an Item");
+            System.out.println("2. Add Stock");
+            System.out.println("3. Remove Stock");
+            System.out.println("4. View All Items");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine(); 
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter item ID: ");
+                    String itemID = scanner.nextLine();
+                    System.out.print("Enter item name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Enter initial quantity: ");
+                    int quantity = scanner.nextInt();
+                    inventory.addItem(new Item(itemID, name, quantity));
+                    System.out.println("Item added successfully.");
+                    break;
+                    
+                case 2:
+                
+                case 3:
+                    
+                case 4:
+                    
+                case 5:
+                    return;
+
+            }
+        }
+    }
+}
