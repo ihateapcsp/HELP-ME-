@@ -12,7 +12,7 @@ public class Inventory{
         return itemstack;
       }
     }
-    return;
+    return null;
   }
   public void displayAllItems(){
     for (int i=0;i<items.size();i++){
