@@ -1,11 +1,8 @@
 
 /**
- * Write a description of class INVENTORY here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * may yoou find your book in this place
  */
-public class INVENTORY
+public class item
 {
     // instance variables - replace the example below with your own
     private int x;
@@ -13,7 +10,7 @@ public class INVENTORY
     /**
      * Constructor for objects of class INVENTORY
      */
-    public INVENTORY()
+    public item()
     {
         // initialise instance variables
         x = 0;
