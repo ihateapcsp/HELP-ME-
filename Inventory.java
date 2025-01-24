@@ -13,4 +13,10 @@ public class Inventory{
       }
     }
   }
+  public void displayAllItems(){
+    for (int i=0;i<items.size();i++){
+      Item itemstack=items.get(i);
+      itemstack.displayItemDetails();
+    }
+  }
 }
