@@ -2,6 +2,8 @@
 /**
  * may you find your book in this place
  */
+
+
 public class Item
 {
     public String itemID;
@@ -16,12 +18,7 @@ public class Item
     }
 
     public void addStock(int amount) {
-        if (amount > 0) {
-            quantity += amount;
-            System.out.println(amount + " items added. New stock: " + quantity);
-        } else {
-            System.out.println("There is literally a remove stock command, NN.");
-        }
+        quantity += amount;
     }
     
     public boolean removeStock(int amount) {
