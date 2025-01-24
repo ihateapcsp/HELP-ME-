@@ -6,5 +6,9 @@ public class Inventory{
     items.add(item);
   }
   public Item findItem(String itemID){
+    for (int i=0;i<items.size();i++){
+      Item itemstack=items.get(i);
+      
+    }
   }
 }
