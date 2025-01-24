@@ -1,21 +1,46 @@
 
 /**
- * may yoou find your book in this place
+ * may you find your book in this place
  */
-public class item
+public class Item
 {
     public String itemID;
     public String name;
     public int quantity;
 
-    public item()
+    public Item(String itemID, String name, int quantity)
     {
-        
-        x = 0;
+        this.itemID = itemID;
+        this.name = name;
+        this.quantity = quantity;
     }
 
-    public int sampleMethod(int y)
-    {
-        return x + y;
+    public void addStock(int amount) {
+        if (amount > 0) {
+            quantity += amount;
+            System.out.println(amount + " items added. New stock: " + quantity);
+        } else {
+            System.out.println("There is literally a remove stock command, NN.");
+        }
     }
-}
+    
+    public boolean removeStock(int amount) {
+        if (amount <= 0) {
+            System.out.println("There is literally a remove command, No Name.");
+            return false;
+        }
+        if (amount <= quantity) {
+            quantity -= amount;
+            System.out.println(amount + " items removed. New stock: " + quantity);
+            return true;
+        } else {
+            System.out.println("Insufficient ITEMS IN STOCK. Available: " + quantity);
+            return false;
+        }
+    }
+
+    public void displayItemDetails() {
+        System.out.println("ID: " + itemID);
+        System.out.println("Name: " + name);
+        System.out.println("Amount: " + quantity);
+    }
