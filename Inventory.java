@@ -24,19 +24,20 @@ public class Inventory{
       //Well Like. IT's more. Idk what Itemstack is.
       //Well no it's more like Why
       //Dw I Lg
+      //shut nn lg me 
       /**
       for (int i=0;i<items.size();i++){
         Item itemstack=items.get(i);
         itemstack.displayItemDetails();
       }
       */
-     if (items.isEmpty()){
-         System.out.println("YOU GOT NOTHING NN");
-     }else{
-         for (Item item:items){
-             item.displayItemDetails();
-         }
-     }
+      if (items.isEmpty()){
+        System.out.println("YOU GOT NOTHING NN");
+      }else{
+        for (Item item:items){
+          item.displayItemDetails();
+        }
+      }
   }
 }
 
