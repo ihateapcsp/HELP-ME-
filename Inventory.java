@@ -19,9 +19,24 @@ public class Inventory{
       return null; 
   }
   public void displayAllItems(){
-    for (int i=0;i<items.size();i++){
-      Item itemstack=items.get(i);
-      itemstack.displayItemDetails();
-    }
+      //what is this Nn
+      //i genuinely don't know what this does
+      //Well Like. IT's more. Idk what Itemstack is.
+      //Well no it's more like Why
+      //Dw I Lg
+      /**
+      for (int i=0;i<items.size();i++){
+        Item itemstack=items.get(i);
+        itemstack.displayItemDetails();
+      }
+      */
+     if (items.isEmpty()){
+         System.out.println("YOU GOT NOTHING NN");
+     }else{
+         for (Item item:items){
+             item.displayItemDetails();
+         }
+     }
   }
 }
+
