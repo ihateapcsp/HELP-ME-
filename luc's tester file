@@ -1,0 +1,71 @@
+
+/**
+ * Write a description of class InventoryManagementSystem here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+import java.util.*;
+public class InventoryManagementSystem
+{
+    public static void main(String [] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        Inventory luc = new Inventory();
+        int choice = 1;
+        do
+        {   System.out.println();
+            System.out.println("Welcome to the Inventory Management System!");
+            System.out.println("1. Add an Item");
+            System.out.println("2. Add Stock");
+            System.out.println("3. Remove Stock");
+            System.out.println("4. View All Items");
+            System.out.println("5. Exit");
+        
+            System.out.print("Enter your choice: ");
+            choice = scan.nextInt();
+            
+            if (choice == 1)
+            {
+                System.out.print("Enter item ID: ");
+                String id = scan.next();
+                System.out.print("Enter item name: ");
+                String name = scan.next();
+                System.out.print("Enter initial quantity: ");
+                int quantity = scan.nextInt();
+                
+                Item newItem = new Item(id, name, quantity);
+                luc.addItem(newItem);
+                System.out.println("Item added successfully!"); 
+            }
+        
+            else if (choice == 2 || choice == 3)
+            {
+                System.out.print("Enter item ID: ");
+                String id = scan.next();
+                Item target = luc.findItem(id);
+                if (target != null) 
+                {
+                    System.out.print("Enter quantity to add or remove: ");
+                    int amount = scan.nextInt();
+                    if (choice == 2)
+                        target.addStock(amount);
+                    else //choice == 3
+                        target.removeStock(amount);
+                }
+                else
+                {
+                    System.out.println("Item not found.");
+                }
+            }
+            else if (choice == 4)
+            {
+                luc.displayAllItems();
+            }
+        }
+        while (choice != 5);
+        
+    }
+
+}
+
