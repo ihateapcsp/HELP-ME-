@@ -20,7 +20,7 @@ public class la_systemdoraland {
             scanner.nextLine(); 
 
             switch (choice) {
-                case 1:
+                case 1: //add item
                     System.out.print("Enter item ID: ");
                     String itemID = scanner.nextLine();
                     System.out.print("Enter item name: ");
@@ -31,13 +31,14 @@ public class la_systemdoraland {
                     System.out.println("Item added successfully.");
                     break;
                     
-                case 2:
+                case 2: //add stock
                 
-                case 3:
+                case 3: //remove stock
                     
-                case 4:
-                    
-                case 5:
+                case 4: //view all items
+                    inventory.displayAllItems();
+                    break;
+                case 5: //exit
                     return;
 
             }
