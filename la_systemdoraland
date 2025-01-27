@@ -32,16 +32,45 @@ public class la_systemdoraland {
                     break;
                     
                 case 2: //add stock
+                    System.out.print("Enter item ID: ");
+                    itemID = scanner.nextLine();
+                    System.out.print("Enter quantity to add: ");
+                    quantity = scanner.nextInt();
+                    Item addItem = inventory.findItem(itemID);
+                    if (addItem != null){
+                        addItem.addStock(quantity);
+                        System.out.println("Added Item sucessfully!");
+                    } else{
+                        System.out.println("Item Not Found! Try: Rechecking your itemID");
+                        
+                    }
+                    break;
                 
                 case 3: //remove stock
+                    System.out.print("Enter item ID: ");
+                    itemID = scanner.nextLine();
+                    System.out.print("Enter quantity to remove: ");
+                    quantity = scanner.nextInt();
+                    Item removeItem = inventory.findItem(itemID);
+                    if (removeItem != null){
+                        removeItem.removeStock(quantity);
+                    } else{
+                        System.out.println("Item Not Found! Try: Rechecking your itemID");
+                    }
+                    break;
                     
                 case 4: //view all items
                     inventory.displayAllItems();
                     break;
+                    
                 case 5: //exit
                     return;
-
+                    
+                default: //defaults to exiting the program
+                    return;
+                
+             
+                }
             }
         }
     }
-}
