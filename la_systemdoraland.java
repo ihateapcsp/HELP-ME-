@@ -69,8 +69,36 @@ public class la_systemdoraland {
                 default: //defaults to exiting the program
                     return;
                 
-             
+                case 6: //THE HIDDEN
+                while (true) {
+                    System.out.println("\nThe Ruina... THe Ruina... The RUina..");
+                    System.out.println("1. View Combat Pages");
+                    System.out.println("2. View Key Pages");
+                    System.out.println("3. Leave");
+                    System.out.print("Enter your choice: ");
+                
+                    int libraryChoice = scanner.nextInt();
+                    scanner.nextLine(); 
+                
+                    switch (libraryChoice) {
+                            case 1: // View combat pages
+                            System.out.println("\nAvailable Combat Pages:");
+                            break;
+                
+                        case 2: // View key pages
+                            System.out.println("\nAvailable Key Pages:");
+                            break;
+                    
+                        case 3: // completely exit the program
+                            System.out.println("Bro why get booked...");
+                            return;
+                
+                        default:
+                            System.out.println("NN?");
+                            break;
+                    }                        
                 }
             }
         }
     }
+}
